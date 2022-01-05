@@ -12,7 +12,8 @@ datasource db {
 
 model Hobby {
   id      Int     @id @default(autoincrement())
-  title   String  @db.VarChar(255)
+  name    String  @db.VarChar(255)
+  rank    Int? 
   user    User    @relation(fields: [userId], references: [id])
   userId  Int     
 }
